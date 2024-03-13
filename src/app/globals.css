@@ -1,0 +1,170 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  --primary: #030317;
+  --secondary: #7F1CFC;
+}
+
+*::-webkit-scrollbar {
+  width: 15px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--primary);
+  border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--secondary);
+  border-radius: 14px;
+  border: 3px solid var(--primary);
+}
+
+
+body {
+  @apply bg-primary font-montserrat text-white;
+}
+
+.pretitle {
+  @apply font-alexBrush text-[42px] text-accent leading-none;
+}
+
+.h2 {
+  @apply text-[32px] xl:text-[38px] font-semibold leading-tight;
+}
+
+.btn {
+  @apply w-full rounded-full cursor-pointer transition-all flex justify-center items-center font-medium;
+}
+
+.btn-sm {
+  @apply w-[146px] h-[50px];
+}
+
+.btn-lg {
+  @apply w-[160px] h-[54px];
+}
+
+.btn-accent {
+  @apply bg-accent text-white hover:bg-accent-hover;
+}
+
+.btn-white {
+  @apply bg-white text-primary hover:bg-white/80;
+}
+
+.section {
+  @apply py-12 xl:py-24;
+}
+
+/* main player */
+.rap-progress {
+  @apply !bg-[#6519c8];
+}
+
+.rap-pin {
+  @apply !bg-white;
+}
+
+.rap-container .rap-slider .rap-progress .rap-pin {
+  @apply !w-[14px] !h-[14px] !bg-white;
+}
+
+.rap-container .rap-slider .rap-progress .rap-pin:hover {
+  @apply scale-[1.2] transition-all duration-300;
+}
+
+.rap-container {
+  @apply !p-0;
+}
+
+.rap-container .rap-pp-button svg {
+  @apply w-[14px];
+}
+
+.rap-container .rap-volume .rap-volume-btn svg {
+  @apply w-[22px];
+}
+
+.rap-container .rap-pp-button svg path,
+.rap-container .rap-volume .rap-volume-btn svg path {
+  @apply fill-accent;
+}
+
+.rap-current-time, 
+.rap-total-time {
+  @apply font-montserrat text-[13px] font-medium;
+}
+
+.rap-container .rap-slider {
+  @apply !bg-[#33335b] !h-[2px];
+}
+
+.rap-container .rap-controls span {
+  @apply text-[15px];
+}
+
+.rap-volume-btn.rap-volume-open svg path{
+  @apply fill-white;
+}
+
+.rap-volume-controls {
+  @apply !bg-primary/80;
+}
+
+.active {
+  @apply border-b-2 border-accent;
+}
+
+/* album slider */
+.album-slider .rap-container .rap-volume .rap-volume-controls {
+  @apply !bg-accent;
+}
+
+.album-slider .rap-container .rap-slider{
+  @apply !bg-primary/40;
+}
+
+.album-slider .rap-container .rap-slider .rap-progress {
+  @apply !bg-white;
+}
+
+.album-slider .rap-container .rap-pp-button svg {
+  @apply w-[12px];
+}
+
+.album-slider .rap-container .rap-volume .rap-volume-btn svg {
+  @apply w-[20px];
+}
+
+.album-slider .rap-container .rap-pp-button svg path,
+.album-slider .rap-container .rap-volume .rap-volume-btn svg path {
+  @apply fill-accent;
+}
+
+.album-slider .rap-container .rap-controls span {
+  @apply !text-sm;
+}
+
+.album-player {
+  @apply !w-[110px] !min-w-0 text-center;
+}
+
+.album-player .rap-controls .rap-slider,
+.album-player .rap-controls .rap-total-time {
+  @apply hidden;
+}
+
+/* thumb slider */
+.thumb-slider .swiper-slide-thumb-active {
+  @apply border-2 border-accent overflow-hidden transition-all duration-700;
+}
+
+
+
+
+
+
